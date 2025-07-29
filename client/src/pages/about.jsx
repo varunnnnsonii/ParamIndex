@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import schoolUniform from "../assets/schoolUniform.jpg";
 import corporateBuyers from "../assets/corporate buyers.jpg";
@@ -10,166 +11,141 @@ import innerwear from "../assets/bottomsInnerwears.jpg";
 import polo from "../assets/collarpollo.jpg";
 import tshirts from "../assets/tshirts.jpg";
 import roundnecks from "../assets/roundnecks.jpg";
+
 const AboutUs = () => {
   return (
-  <div >
+    // Main container with light background and default text color
+    <div className="bg-light-gray-bg text-slate-800 font-sans">
+      {/* "About Us" Header - Consistent with previous discussion */}
+      <h1 className="text-4xl md:text-5xl font-bold mb-12 leading-tight text-center pt-10 text-param-blue">
+        About Us
+      </h1>
 
-    <h1 className="text-4xl md:text-5xl font-bold mb-12 leading-tight text-gray-900 text-center">About Us</h1>
-
-    
-    
-    <div className=" w-full bg-gray-200 flex flex-col items-center justify-center min-h-[500px] px-4 py-8 md:px-8">
-      {/* The outer div now acts as a flex container that centers its content */}
-
-      <div className="container max-w-[1500px]">
-        {/* The container class makes this div horizontally centered on the page. */}
-        {/* We removed items-center from here as it's not a flex container itself. */}
-
-        <div className="relative z-10 text-center text-black">
-          {/* This div contains the text and the text-center class aligns the text. */}
-          {/* All explicit mx- classes are removed to allow for natural responsive flow within the container. */}
-
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-            A Hosiery House from Mumbai, Shipping Comfort Across Borders
-          </h1>
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl mb-4 opacity-90"> {/* Reduced mb-10 to mb-4 for better flow */}
-            Param Impex is a uniform-focused export house based in Mumbai, India, producing and delivering customized T-shirts and soft hosiery garments to clients across Africa, the Middle East, Southeast Asia, and Europe.
-          </p>
-          <p className="text-lg md:text-xl opacity-90"> {/* Reduced mb-10 to no mb for the last paragraph */}
-            From choosing the right <strong className="font-bold">GSM (grammage)</strong> to stitching styles that match your region's preferences — we manufacture with care, scale with speed, and ship with confidence.
-          </p>
+      {/* Intro Section - Deep blue background with white text */}
+      <div className="w-full flex flex-col items-center justify-center px-4 py-12 md:px-8 bg-param-blue">
+        <div className="container max-w-[1200px]">
+          <div className="relative z-10 text-center">
+            {/* Main Headline for Intro Section */}
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+              A Hosiery House from Mumbai, Shipping Comfort Across Borders
+            </h2>
+            {/* Paragraph 1 */}
+            <p className="text-lg md:text-xl mb-6 text-white leading-relaxed">
+              Param Impex is a uniform-focused export house based in Mumbai, India, producing and delivering customized T-shirts and soft hosiery garments to clients across Africa, the Middle East, Southeast Asia, and Europe.
+            </p>
+            {/* Paragraph 2 with GSM highlighted in gold */}
+            <p className="text-lg md:text-xl text-white leading-relaxed">
+              From choosing the right <strong className="font-bold text-param-gold">GSM (grammage)</strong> to stitching styles that match your region's preferences — we manufacture with care, scale with speed, and ship with confidence.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div className="container mx-auto px-4 py-8">
-      
-      {/* About Us Section */}
-    
 
-      {/* <hr className="my-12 border-gray-300" /> */}
-      <hr className="my-12 border-gray-800" />
       {/* What We Manufacture Section */}
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold  text-black leading-relaxed text-center mb-8">What We Manufacture</h2>
-        <p className="text-lg md:text-xl opacity-90 text-center leading-relaxed mb-10">
+      <div className="container mx-auto px-4 py-12">
+        {/* Section Heading */}
+        <h2 className="text-4xl font-bold text-center text-param-blue mb-6">What We Manufacture</h2>
+        {/* Section Sub-description */}
+        <p className="text-lg md:text-xl text-center text-slate-700 mb-10 leading-relaxed">
           We specialize in large-scale production of hosiery-based uniforms, with branding-ready customization.
         </p>
 
-        {/* Improved responsive layout - single column on mobile, 2 columns on tablet, 3 on desktop */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 lg:gap-8">
-          {/* Round Neck T-Shirts */}
-          <div className="bg-blue-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
-            <img
-              src={roundnecks}
-              alt="Round Neck T-Shirts"
-              className="mb-4 rounded-md w-full h-48 object-cover"
-            />
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Round Neck T-Shirts (Unisex)</h3>
-            {/* Removed list-disc */}
-            <ul className="list-none text-lg md:text-xl opacity-90 leading-relaxed text-left w-full">
-              <li className="mb-1">Soft, breathable cotton/poly-cotton blends</li>
-              <li className="mb-1">Available in 160–240 GSM</li>
-              <li className="mb-1">Ideal for schools, events, company branding</li>
-              <li className="mb-1">Custom logo printing or embroidery</li>
-              <li className="mb-1">Short sleeve / long sleeve options</li>
-              <li className="mb-1">Sizes: Kids to 5XL</li>
+        {/* Product Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {/* Round Neck T-Shirts Card */}
+          <div className="bg-white hover:bg-light-gray-bg transition border border-gray-200 rounded-lg shadow-md hover:shadow-lg p-6 text-center transform hover:-translate-y-1">
+            <img src={roundnecks} alt="Round Neck T-Shirts" className="mb-4 rounded-md w-full h-48 object-cover border border-gray-100" />
+            <h3 className="text-xl font-bold text-param-blue mb-3">Round Neck T-Shirts (Unisex)</h3>
+            <ul className="text-slate-700 text-left text-base leading-relaxed space-y-1">
+              <li>Soft, breathable cotton/poly-cotton blends</li>
+              <li>Available in 160–240 GSM</li>
+              <li>Ideal for schools, events, company branding</li>
+              <li>Custom logo printing or embroidery</li>
+              <li>Short sleeve / long sleeve options</li>
+              <li>Sizes: Kids to 5XL</li>
             </ul>
           </div>
 
-          {/* Hosiery Bottoms & Innerwear */}
-          <div className="bg-blue-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center md:col-span-2 lg:col-span-1">
-            <img
-              src={innerwear}
-              alt="Hosiery Bottoms & Innerwear"
-              className="mb-4 rounded-md w-full h-48 object-cover"
-            />
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Hosiery Bottoms & Innerwear (Bulk Orders)</h3>
-            {/* Removed list-disc */}
-            <ul className="list-none text-lg md:text-xl opacity-90 leading-relaxed text-left w-full">
-              <li className="mb-1">Track pants, leggings, and shorts</li>
-              <li className="mb-1">Institutional undergarments in 100% cotton</li>
-              <li className="mb-1">Gym wear for schools and sports events</li>
-              <li className="mb-1">Elasticized waistbands, comfort fit</li>
-              <li className="mb-1">Private label support available</li>
+          {/* Hosiery Bottoms & Innerwear Card */}
+          <div className="bg-white hover:bg-light-gray-bg transition border border-gray-200 rounded-lg shadow-md hover:shadow-lg p-6 text-center transform hover:-translate-y-1">
+            <img src={innerwear} alt="Bottoms & Innerwear" className="mb-4 rounded-md w-full h-48 object-cover border border-gray-100" />
+            <h3 className="text-xl font-bold text-param-blue mb-3">Hosiery Bottoms & Innerwear</h3>
+            <ul className="text-slate-700 text-left text-base leading-relaxed space-y-1">
+              <li>Track pants, leggings, and shorts</li>
+              <li>Institutional undergarments in 100% cotton</li>
+              <li>Gym wear for schools and sports events</li>
+              <li>Elasticized waistbands, comfort fit</li>
+              <li>Private label support available</li>
             </ul>
           </div>
 
-          {/* Collar T-Shirts (Polo Style) */}
-          <div className="bg-blue-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
-            <img
-              src={polo}
-              alt="Collar T-Shirts (Polo Style)"
-              className="mb-4 rounded-md w-full h-48 object-cover"
-            />
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Collar T-Shirts (Polo Style)</h3>
-            {/* Removed list-disc */}
-            <ul className="list-none text-lg md:text-xl opacity-90 leading-relaxed text-left w-full">
-              <li className="mb-1">Pique knit, honeycomb & jersey fabric options</li>
-              <li className="mb-1">2-button and 3-button plackets</li>
-              <li className="mb-1">Solid, contrast, or tipping collar styles</li>
-              <li className="mb-1">Corporate and institutional color matching</li>
-              <li className="mb-1">Branding zones on chest, sleeve, or back</li>
-              <li className="mb-1">Sizes for men, women & unisex</li>
+          {/* Polo T-Shirts Card */}
+          <div className="bg-white hover:bg-light-gray-bg transition border border-gray-200 rounded-lg shadow-md hover:shadow-lg p-6 text-center transform hover:-translate-y-1">
+            <img src={polo} alt="Polo T-Shirts" className="mb-4 rounded-md w-full h-48 object-cover border border-gray-100" />
+            <h3 className="text-xl font-bold text-param-blue mb-3">Collar T-Shirts (Polo Style)</h3>
+            <ul className="text-slate-700 text-left text-base leading-relaxed space-y-1">
+              <li>Pique knit, honeycomb & jersey fabric options</li>
+              <li>2-button and 3-button plackets</li>
+              <li>Solid, contrast, or tipping collar styles</li>
+              <li>Corporate and institutional color matching</li>
+              <li>Branding zones on chest, sleeve, or back</li>
+              <li>Sizes for men, women & unisex</li>
             </ul>
           </div>
-
         </div>
       </div>
 
-      <hr className="my-12 border-gray-800" />
+      <hr className="my-12 border-gray-200" /> {/* Lighter hr for better visual flow */}
 
       {/* Export-Ready Systems Section */}
-      <h2 className="text-3xl font-bold  text-black leading-relaxed text-center mb-8">Export-Ready Systems</h2>
-      <div className="flex flex-col lg:flex-row-reverse items-center lg:items-start lg:justify-between mb-16 gap-8">
-        
-        <div className="w-full lg:w-2/3">
-          <h2 className="text-3xl font-semibold  text-black leading-relaxed mb-4">T-shirts packed right. Delivered tight.</h2>
-          
-          {/* New flex container for side-by-side lists */}
-          <div className="flex flex-col md:flex-row justify-between gap-8">
-            {/* Div 1: Pre-production samples list */}
-            <div className="flex-1">
-              <ul className="list-none text-lg md:text-xl opacity-90 leading-relaxed mb-6 pl-0">
-                <li className="mb-1"><strong className="font-semibold">Pre-production samples for every new client</strong> </li>
-                <li className="mb-1">Global size charts in inches/cm</li>
-                <li className="mb-1">Polybag packing, master carton labeling</li>
-                <li className="mb-1">Custom tags, barcode stickers, folding styles</li>
-                <li className="mb-1">Air & sea shipping options from Mumbai</li>
-              </ul>
+      <div className="container mx-auto px-4 py-12">
+        {/* Section Heading */}
+        <h2 className="text-4xl font-bold text-center text-param-blue mb-8">Export-Ready Systems</h2>
+        <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between gap-8">
+          {/* Text Content */}
+          <div className="w-full lg:w-2/3">
+            <h2 className="text-2xl font-bold text-param-blue mb-4">T-shirts packed right. Delivered tight.</h2>
+            {/* Side-by-side lists for details and documents */}
+            <div className="flex flex-col md:flex-row gap-8">
+              {/* Details List */}
+              <div className="flex-1">
+                <ul className="text-slate-700 text-base leading-relaxed space-y-1">
+                  <li><strong>Pre-production samples for every new client</strong></li>
+                  <li>Global size charts in inches/cm</li>
+                  <li>Polybag packing, master carton labeling</li>
+                  <li>Custom tags, barcode stickers, folding styles</li>
+                  <li>Air & sea shipping options from Mumbai</li>
+                  <li>DDU/DDP terms for seamless delivery (added from previous prompt)</li>
+                </ul>
+              </div>
+              {/* Documents List */}
+              <div className="flex-1">
+                <h4 className="text-xl font-semibold text-param-blue mb-3">Documents Provided:</h4>
+                <ul className="text-slate-700 text-base leading-relaxed space-y-1">
+                  <li>Commercial Invoice</li>
+                  <li>Packing List</li>
+                  <li>Certificate of Origin (on request)</li>
+                  <li>HS Codes & technical sheet</li>
+                  <li>Branded packaging (if needed)</li>
+                </ul>
+              </div>
             </div>
-
-            {/* Div 2: Documents Provided list */}
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Documents Provided:</h3>
-              <ul className="list-none text-lg md:text-xl opacity-90 leading-relaxed pl-0">
-                <li className="mb-1">Commercial Invoice</li>
-                <li className="mb-1">Packing List</li>
-                <li className="mb-1">Certificate of Origin (on request)</li>
-                <li className="mb-1">HS Codes & technical sheet</li>
-                <li className="mb-1">Branded packaging (if needed)</li>
-              </ul>
-            </div>
-          </div> {/* End of side-by-side lists container */}
-
-        </div>
-        <div className="w-full lg:w-1/3 flex justify-center lg:justify-start">
-          {/* Room for an image related to "Export-Ready Systems" */}
-          <img
-            src={tshirts}
-            alt="Export Ready Systems"
-            className="rounded-lg shadow-md w-full max-w-md h-64 object-cover"
-          />
+          </div>
+          {/* Image */}
+          <div className="w-full lg:w-1/3 flex justify-center lg:justify-start">
+            <img src={tshirts} alt="Export Ready Systems" className="rounded-lg shadow-md w-full max-w-md h-64 object-cover border border-gray-100 bg-white" />
+          </div>
         </div>
       </div>
 
-      {/* <hr className="my-12 border-gray-300" /> */}
-      <hr className="my-12 border-gray-800" />
+      <hr className="my-12 border-gray-200" /> {/* Lighter hr */}
+
       {/* Who We Serve Section */}
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold  text-black leading-relaxed text-center mb-8">Who We Serve</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      <div className="container mx-auto px-4 py-12">
+        {/* Section Heading */}
+        <h2 className="text-4xl font-bold text-center text-param-blue mb-10">Who We Serve</h2>
+        {/* Grid of service categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {[
             { text: "School Uniform Distributors", image: schoolUniform },
             { text: "Corporate Buyers", image: corporateBuyers },
@@ -178,21 +154,20 @@ const AboutUs = () => {
             { text: "Retailers & Resellers", image: retailors },
             { text: "Promotional T-shirt Agencies", image: promotionalAgencies },
           ].map((item, index) => (
-            <div key={index} className="bg-gray-200 rounded-lg shadow-sm p-4 text-center text-lg text-black leading-relaxed font-medium">
-              <img 
-                src={item.image} 
-                alt={item.text}
-                className="w-full h-32 object-cover rounded-md mb-3"
-              />
+            <div
+              key={index}
+              className="bg-white hover:bg-light-gray-bg transition border border-gray-200 rounded-lg shadow-md hover:shadow-lg p-4 text-center text-lg text-slate-800 font-medium transform hover:-translate-y-1"
+            >
+              <img src={item.image} alt={item.text} className="w-full h-32 object-cover rounded-md mb-3 border border-gray-100" />
               {item.text}
             </div>
           ))}
         </div>
-        <p className="text-xl  text-black  text-center leading-relaxed mt-10 font-medium">
+        {/* Concluding message */}
+        <p className="text-xl text-center text-slate-700 mt-10 font-medium leading-relaxed">
           If your business needs soft, well-finished, bulk T-shirts — we're your partner.
         </p>
       </div>
-    </div>
     </div>
   );
 };

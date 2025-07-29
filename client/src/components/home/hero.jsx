@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     // Hero Component Container
     // Uses Tailwind CSS for responsive styling, centering, and shadows.
-    <div className="relative w-full bg-gray-200  overflow-hidden p-8 md:p-12 min-h-[500px]">
-      <div className="relative z-10 text-center text-black">
+    <div className="relative w-full bg-param-blue  overflow-hidden p-8 md:p-12 min-h-[500px]">
+      <div className="relative z-10 text-center text-white">
         {/* Headline */}
         <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
           Uniform T-Shirts Engineered for Everyday Performance.

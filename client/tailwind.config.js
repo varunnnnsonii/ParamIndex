@@ -9,6 +9,11 @@ export default {
   ],
   theme: {
     extend: {
+      colors:{
+        'param-blue': '#1A3B6A', // Your specific deep blue
+        'param-gold': '#B8860B',
+        'light-gray-bg': '#F8F8F8' // Your specific muted gold
+      },
       screens: {
         'custom': '900px',
       },},
