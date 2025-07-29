@@ -7,6 +7,7 @@ import Testimonials from "./pages/testimonials";
 import Enquiry from "./pages/enquiry";
 import Contact from "./pages/contact";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
